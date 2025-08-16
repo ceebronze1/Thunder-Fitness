@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Thunder Health Fitness</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🏋️ Thunder Health Fitness Dashboard</h1>
+    <h2 id="welcome"></h2>
+    <p id="user-info"></p>
+
+    <!-- Motivation -->
+    <h3>💡 Daily Motivation</h3>
+    <p id="motivation" class="motivation"></p>
+
+    <!-- Fitness Log -->
+    <h3>📝 Fitness Log</h3>
+    <input type="text" id="exercise" placeholder="Exercise (e.g. Pushups)"/>
+    <input type="number" id="duration" placeholder="Duration (mins)"/>
+    <button onclick="addLog()">Add Log</button>
+
+    <div class="log">
+      <h4>Your Logs:</h4>
+      <div id="logs"></div>
+    </div>
+
+    <!-- BMI Calculator -->
+    <h3>⚖️ BMI Calculator</h3>
+    <input type="number" id="weight" placeholder="Weight (kg)"/>
+    <input type="number" id="height" placeholder="Height (cm)"/>
+    <button onclick="calculateBMI()">Calculate BMI</button>
+    <p id="bmi-result"></p>
+
+    <!-- Water Tracker -->
+    <h3>💧 Water Tracker</h3>
+    <button onclick="addWater()">+1 Glass</button>
+    <p id="water-tracker">Glasses Today: 0</p>
+
+    <!-- Workout of the Day -->
+    <h3>🔥 Workout of the Day</h3>
+    <p id="workout"></p>
+    <button onclick="generateWorkout()">New Workout</button>
+
+    <!-- Health Tips -->
+    <h3>📋 5 Tips to Stay Healthy</h3>
+    <div class="tips-box">
+      <ul>
+        <li>Drink at least 2L of water daily.</li>
+        <li>Sleep 7-9 hours each night.</li>
+        <li>Exercise at least 30 minutes, 5x a week.</li>
+        <li>Eat fruits & veggies with every meal.</li>
+        <li>Take rest days to recover properly.</li>
+      </ul>
+    </div>
+
+    <div class="nav">
+      <a href="about.html">About</a>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
